@@ -1,0 +1,8 @@
+notebook
+influxdb
+pandas
+seaborn
+scikit-learn
+keras
+scikeras
+tensorflow
