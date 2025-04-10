@@ -2,6 +2,7 @@ import requests
 import json
 
 url_docker = "http://localhost:8080/predict"
+url_gcp = "https://attakx-service-507224908244.europe-west9.run.app/predict"
 
 payload = {
     "duration": 0,
@@ -40,7 +41,7 @@ payload = {
 
 def test_prediction():
     try:
-        response = requests.post(url_docker, json=payload)
+        response = requests.post(url_gcp, json=payload)
         
         if response.status_code == 200:
             result = response.json()

@@ -83,9 +83,32 @@ $ influx -port 8089
 load csv and send it to influxdb in the intrusion database
 $ telegraf --config config/telegraf.conf
 
-# Todo
-- save the model in a keras format
-- re build the docker image
-- test in local
-- test in GCP
-- automate the process with bash script
+
+## GCP
+
+## 1 Setup 
+```bash
+gcloud auth login
+gcloud config set project $PROJECT_ID (attakx)
+gcloud services enable \
+  cloudbuild.googleapis.com \
+  run.googleapis.com \
+  artifactregistry.googleapis.com
+```
+## 2 Create Artifact Registry Repository
+```bash
+gcloud artifacts repositories create "attakx-repo" \
+  --repository-format=docker \
+  --location="europe-west9" \
+  --description="Docker repository for Attakx"
+```
+
+## 3 Deploy on Cloud Run
+→ gcp.bash
+
+## 4 Test the API
+I got the domain name :
+https://attakx-service-507224908244.europe-west9.run.app/
+I test it with the test_request.py file and it works.
+
+EOF
