@@ -64,6 +64,8 @@ Prediction result:
     "prediction": "normal",
     "status": "success"
 }
+First with the Flask App, then with the Docker.
+I also have a shell script to test the API with the Docker image.
 
 
 ## Commands

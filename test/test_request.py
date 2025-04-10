@@ -1,7 +1,7 @@
 import requests
 import json
 
-url = "http://localhost:5000/predict"
+url_docker = "http://localhost:8080/predict"
 
 payload = {
     "duration": 0,
@@ -40,7 +40,7 @@ payload = {
 
 def test_prediction():
     try:
-        response = requests.post(url, json=payload)
+        response = requests.post(url_docker, json=payload)
         
         if response.status_code == 200:
             result = response.json()
