@@ -1,0 +1,12 @@
+__pycache__
+venv/**
+data/**
+test/**
+config/**
+.ipynb_checkpoints/**
+images/**
+Dockerfile
+README.md
+.gitignore
+.git
+Classifier.ipynb

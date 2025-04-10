@@ -53,6 +53,19 @@ SELECT COUNT("Attack Type") AS total FROM traffic GROUP BY "Attack Type"
 ## Telegraf
 I use Telegraf to load the csv files into InfluxDB, to be able to do queries.
 
+
+## Test for the API 
+```bash
+python3 test_request.py
+``` 
+Prediction result:
+{
+    "confidence": 0.9999682903289795,
+    "prediction": "normal",
+    "status": "success"
+}
+
+
 ## Commands
 $ jupyter notebook
 go on http://localhost:8888/tree
@@ -67,3 +80,10 @@ $ influx -port 8089
 
 load csv and send it to influxdb in the intrusion database
 $ telegraf --config config/telegraf.conf
+
+# Todo
+- save the model in a keras format
+- re build the docker image
+- test in local
+- test in GCP
+- automate the process with bash script

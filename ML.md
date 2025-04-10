@@ -71,3 +71,5 @@ Now that I have trained the three models, I can evaluate them using a confusion 
 TODO
 
 ## 8 Saving trained models
+I use joblib to save the trained models in a pickle file.
+I can load them in Python for exemple
