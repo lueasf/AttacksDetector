@@ -1,1 +1,3 @@
 venv/*
+config/influxdb_data/*
+.ipynb_checkpoints/*

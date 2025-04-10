@@ -11,6 +11,7 @@ Objectives :
     - Model training (DT, SVM, ANN)
     - Model evaluation and selection
 * Export trained model.
+* Deploy trained model in GCP with Docker and a Flask API.
 
 
 ## Attacks 
