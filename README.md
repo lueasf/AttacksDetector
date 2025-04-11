@@ -44,6 +44,15 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+## Run the Flask App
+```bash
+python3 app_flask.py
+```
+## Run the FastAPI app (same app but different framework)
+```bash
+python3 -m uvicorn app_fastapi:app --reload --port 5000
+```
+
 ## InfluxDB
 We can either use the influx (-port 8089) command to connect to the database and write SQL queries or we can connect to the client using the influxdb python library.
 ```sql
@@ -54,7 +63,7 @@ SELECT COUNT("Attack Type") AS total FROM traffic GROUP BY "Attack Type"
 I use Telegraf to load the csv files into InfluxDB, to be able to do queries.
 
 
-## Test for the API 
+## Test for the API on Docker/Flask or GCP
 ```bash
 python3 test_request.py
 ``` 

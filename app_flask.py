@@ -19,9 +19,10 @@ import __main__
 __main__.ann = ann 
 
 try:
-    scaler = joblib.load('models/scaler.joblib')
+    scaler = joblib.load('models/scaler.joblib') # to normalize the data
     model_ann = joblib.load('models/model_ann.joblib')
-    label_encoder = joblib.load('models/label_encoder.joblib')
+    label_encoder = joblib.load('models/label_encoder.joblib') # to transform the labels into integers
+
 except Exception as e:
     print("Model loading error:", str(e))
     raise
@@ -55,7 +56,7 @@ def predict():
 
         # 3. Preprocessing
         pmap = {'icmp':0, 'tcp':1, 'udp':2}
-        fmap = {'SF':0, 'S0':1, 'REJ':2, 'RSTR':3, 'RSTO':4, 'SH':5, 'OTH':10}  # Adaptez
+        fmap = {'SF':0, 'S0':1, 'REJ':2, 'RSTR':3, 'RSTO':4, 'SH':5, 'OTH':10} 
         input_df['protocol_type'] = input_df['protocol_type'].map(pmap)
         input_df['flag'] = input_df['flag'].map(fmap)
         input_df.drop(['service', 'target'], axis=1, errors='ignore', inplace=True)

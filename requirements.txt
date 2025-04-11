@@ -11,3 +11,5 @@ matplotlib
 numpy
 flask
 gunicorn
+fastapi
+uvicorn
