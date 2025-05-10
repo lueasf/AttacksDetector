@@ -56,3 +56,23 @@ def test_prediction():
 
 if __name__ == "__main__":
     test_prediction()
+
+### for this test, we get this answer : 
+"""
+Prediction result:
+{
+    "confidence": 0.9999682903289795,
+    "prediction": "normal",
+    "status": "success"
+}
+"""
+
+### However, if we change, nums of failed login for exemple to 3, we get :
+"""
+Prediction result:
+{
+    "confidence": 0.5152491927146912,
+    "prediction": "u2r",
+    "status": "success"
+}
+"""

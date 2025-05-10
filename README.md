@@ -11,7 +11,7 @@ Objectives :
     - Model training (DT, SVM, ANN)
     - Model evaluation and selection
 * Export trained model.
-* Deploy trained model in GCP with Docker and a Flask API.
+* Deploy trained model in GCP with Docker and an API using Flask and FastAPI.
 
 
 ## Attacks 
@@ -35,6 +35,8 @@ The dataset is from the KDD Cup 1999, which is a benchmark dataset for network i
 - _Python Libs_ : Pandas, Sklearn, Keras, Tensorflow,...
 - _InfluxDB_ is used here to simulate a scenario where the data is stored in this database.
 - _Telegraf_ is used here to collect the data from the database and send it to the ML-based intrusion detector.
+- _Docker_ is used to create a container for the ML-based intrusion detector.
+- _GCP_ is used to deploy the ML-based intrusion detector in the cloud.
 
 
 ## Installation
