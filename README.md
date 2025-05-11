@@ -12,6 +12,7 @@ Objectives :
     - Model evaluation and selection
 * Export trained model.
 * Deploy trained model in GCP with Docker and an API using Flask and FastAPI.
+* Test the model in a SDN topology with Mininet and Ryu controller.
 
 
 ## Attacks 
@@ -121,5 +122,12 @@ gcloud artifacts repositories create "attakx-repo" \
 I got the domain name :
 https://attakx-service-507224908244.europe-west9.run.app/
 I test it with the test_request.py file and it works.
+
+
+## DEMO
+I created an SDN topology with Mininet and Ryu controller. I used the Ryu controller to call the API and send the data to the ML-based IDS. I used the Mininet topology to simulate the network with 2 hosts, 2 switches and an attacker. We can see in the image below that:
+- when the first host sends a ping to the second host, the API returns "normal", and the packets are sent to the second host.
+- when the attacker sends a ping flood to the first host, the API returns "ddos", and the packets are dropped by more than 85%.
+![Demo](images/demo.png)
 
 EOF
